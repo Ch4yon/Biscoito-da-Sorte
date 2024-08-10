@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%
+}
+
+body {
+    background: linear-gradient(45deg, #190361, #bb00ff);
+    animation: gradient 10s ease infinite;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+body, button, input {
+    font-family: "DM Sans", sans-serif;
+}
+
+.hide {
+    display: none;
+}
+
+.tela1 button{
+    background: none;
+    border: none;
+}
+
+.tela1 button:hover {
+    cursor: pointer;
+    animation: tremor 0.1s infinite;
+}
+
+main {
+    background: #ffffff;
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
+    border-radius: .6rem;
+    padding: 4.8rem 6.4rem 6.4rem;
+    width: min(42.8rem, 90%);
+    margin-top: -12rem;
+    text-align: center;
+    box-shadow: 5px 5px 20px;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.4rem;
+    margin-bottom: 1.6rem;
+}
+
+h1, p {
+    color: #34355b;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+form {
+    margin-top: 4.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+.tela2 button {
+    padding: 1.6rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #FF9500;
+    color: white;
+    font-weight: bold;
+}
+.tela2 button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.tela2 img {
+    margin: 7rem 0 5rem 0;
+}
+
+.tela2 p {
+    font-family: 'Dancing Script', sans-serif;
+    margin-top: 1.7rem;
+    height: 10.7rem;
+    font-size: 2.4rem;
+    background-color: #E4EDF1;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    animation: efect 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    box-shadow: 2px 2px 9px;
+    transform-origin: center;
+}
+
+
+@keyframes efect {
+    0% {
+        transform: translateY(600px) rotateX(30deg) scale(0);
+        transform-origin: 50% 100%;
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0) rotateX(0) scale(1);
+        transform-origin: 50% -1400px;
+        opacity: 1;
+      }
+  }
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 40%;
+	}
+	50% {
+        background-position: 100% 50%;
+	}
+	100% {
+        background-position: 0% 50%;
+	}
+}
+
+@keyframes tremor {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(5px) translateY(5px);
+    }
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
